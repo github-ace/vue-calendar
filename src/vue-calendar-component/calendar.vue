@@ -195,6 +195,10 @@ export default {
     futureDayHide: {
       type: String,
       default: `2554387200`
+    },
+    noJump:{
+      type:Boolean,
+      default:false
     }
   },
   created() {
@@ -215,6 +219,7 @@ export default {
         this.getList(this.myDate, item.date);
       }
       if (item.otherMonth !== "nowMonth") {
+        if(this.noJump) return;
         item.otherMonth === "preMonth"
           ? this.PreMonth(item.date)
           : this.NextMonth(item.date);
