@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/demo/demo'
+import HelloWorld from '@/vue-calendar-component/index.js'
 
 Vue.use(Router)
 
